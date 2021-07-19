@@ -21,9 +21,9 @@
 <div style="text-align: center">
     <input type="button" value="Start Webcam" onclick="PageController.startcam()" />
     <input type="button" value="Stop Webcam" onclick="PageController.stopcam()" /><br />
-    API-URL: <textarea cols="50" rows="2" id="apiurl">https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect?</textarea><br />
-    API-Key: <textarea cols="50" rows="1" id="apikey"></textarea><br />
-    Analyze frame every <input type="text" value="500" size="6" id="timeframe" />ms<br />
+    API URL: <textarea cols="75" rows="1" id="apiurl">https://your-endpoint.cognitiveservices.azure.com</textarea><br />
+    API Key: <textarea cols="50" rows="1" id="apikey">XXX</textarea><br />
+    Analyze frame every <input type="text" value="50" size="6" id="timeframe" />ms<br />
     <input type="button" value="Start analyze" onclick="PageController.startanalyse()" />
     <input type="button" value="Stop analyze" onclick="PageController.stopanalyse()" />
 </div>
@@ -31,6 +31,7 @@
 <div id="container">
     <video id="videoElement" width="640" height="480" style="display:none" ></video>
     <canvas id="canvas" width="640" height="480"></canvas>
+    <canvas id="canvas_raw" width="640" height="480" style="display:none"></canvas>
 </div>
 <div>
 

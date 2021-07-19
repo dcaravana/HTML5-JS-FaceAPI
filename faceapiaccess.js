@@ -6,9 +6,10 @@ var FaceAnalyse = (function() {
     {
         return {
             // Request parameters
+            "recognitionModel": "recognition_04",
             "returnFaceId": "true",
             "returnFaceLandmarks": "false",
-            "returnFaceAttributes": "age,gender,emotion",
+            "returnFaceAttributes": "age,gender,emotion,smile,headPose",
         };
     }
 
@@ -23,7 +24,7 @@ var FaceAnalyse = (function() {
             
             canvas.toBlob(function(blob){
                 $.ajax({
-                    url: apiurl + $.param(buildParameter()),
+                    url: apiurl +'/face/v1.0/detect?'+ $.param(buildParameter()),
                     beforeSend: function(xhrObj){
                         // Request headers
                         xhrObj.setRequestHeader("Content-Type","application/octet-stream");
