@@ -20,12 +20,12 @@
 <body>
 <div style="text-align: center">
     <input type="button" value="Start Webcam" onclick="PageController.startcam()" />
-    <input type="button" value="Stop Webcam" onclick="PageController.stopcam()" /><br />
+    <input id="btn_stop_webcam" type="button" value="Stop Webcam" onclick="PageController.stopcam()" disabled /><br />
     API URL: <textarea cols="75" rows="1" id="apiurl">https://your-endpoint.cognitiveservices.azure.com</textarea><br />
     API Key: <textarea cols="50" rows="1" id="apikey">XXX</textarea><br />
     Analyze frame every <input type="text" value="50" size="6" id="timeframe" />ms<br />
-    <input type="button" value="Start analyze" onclick="PageController.startanalyse()" />
-    <input type="button" value="Stop analyze" onclick="PageController.stopanalyse()" />
+    <input id="btn_start_analyse" type="button" value="Start analyze" onclick="PageController.startanalyse()" disabled />
+    <input id="btn_stop_analyse" type="button" value="Stop analyze" onclick="PageController.stopanalyse()" disabled />
 </div>
 
 <div id="container">

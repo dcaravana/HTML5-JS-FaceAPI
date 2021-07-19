@@ -83,6 +83,10 @@ var PageController = (function() {
                 video.srcObject = stream;
                 video.play();
                 drawtimer = setInterval(draw, redrawTimeoutOnCanvas);
+
+                document.querySelector("#btn_stop_webcam").disabled=false;
+                document.querySelector("#btn_start_analyse").disabled=false;
+                document.querySelector("#btn_stop_analyse").disabled=false;
             }
         
             function videoError(e) {
